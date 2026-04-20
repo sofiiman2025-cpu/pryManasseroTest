@@ -19,10 +19,7 @@ namespace pryManasseroTest
 
         private void frmCargaProducto_Load(object sender, EventArgs e)
         {
-            cmbProducto.Items.Add("Notebook");
-            cmbProducto.Items.Add("PC Escritorio");
-                cmbProducto.Items.Add("Impresora");
-                cmbProducto.Items.Add("Scanner");
+           
 
         }
 
@@ -33,13 +30,17 @@ namespace pryManasseroTest
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            string Nombre = txtNombre.Text;
-            string Producto = cmbProducto.Text;
+            MessageBox.Show("Producto Registrado:");
 
 
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
         {
 
         }
