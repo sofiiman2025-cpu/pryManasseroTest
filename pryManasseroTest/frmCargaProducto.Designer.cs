@@ -36,15 +36,19 @@
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpAdicional = new System.Windows.Forms.GroupBox();
+            this.grpTipo = new System.Windows.Forms.GroupBox();
             this.rbRepuesto = new System.Windows.Forms.RadioButton();
             this.rbEquipo = new System.Windows.Forms.RadioButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblProducto = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbInstalación = new System.Windows.Forms.RadioButton();
+            this.rbEnvío = new System.Windows.Forms.RadioButton();
+            this.rbGarantía = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.grpAdicional.SuspendLayout();
+            this.grpTipo.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -53,9 +57,10 @@
             this.lblNombre.BackColor = System.Drawing.Color.White;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.Navy;
-            this.lblNombre.Location = new System.Drawing.Point(19, 16);
+            this.lblNombre.Location = new System.Drawing.Point(28, 25);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(58, 17);
+            this.lblNombre.Size = new System.Drawing.Size(87, 25);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             // 
@@ -63,9 +68,10 @@
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.Navy;
-            this.btnRegistrar.Location = new System.Drawing.Point(273, 12);
+            this.btnRegistrar.Location = new System.Drawing.Point(410, 18);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(69, 23);
+            this.btnRegistrar.Size = new System.Drawing.Size(104, 35);
             this.btnRegistrar.TabIndex = 1;
             this.btnRegistrar.Text = "registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
@@ -73,9 +79,10 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(98, 14);
+            this.txtNombre.Location = new System.Drawing.Point(147, 22);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(169, 20);
+            this.txtNombre.Size = new System.Drawing.Size(252, 26);
             this.txtNombre.TabIndex = 2;
             // 
             // cmbProducto
@@ -86,9 +93,10 @@
             "Pc escritorio",
             "Impresora",
             "Scanner"});
-            this.cmbProducto.Location = new System.Drawing.Point(158, 69);
+            this.cmbProducto.Location = new System.Drawing.Point(237, 106);
+            this.cmbProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbProducto.Name = "cmbProducto";
-            this.cmbProducto.Size = new System.Drawing.Size(121, 21);
+            this.cmbProducto.Size = new System.Drawing.Size(180, 28);
             this.cmbProducto.TabIndex = 3;
             this.cmbProducto.SelectedIndexChanged += new System.EventHandler(this.cmbProducto_SelectedIndexChanged);
             // 
@@ -98,9 +106,10 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(19, 73);
+            this.label1.Location = new System.Drawing.Point(28, 112);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 17);
+            this.label1.Size = new System.Drawing.Size(169, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "Lista de producto";
             // 
@@ -108,9 +117,10 @@
             // 
             this.btnSiguiente.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguiente.ForeColor = System.Drawing.Color.Navy;
-            this.btnSiguiente.Location = new System.Drawing.Point(122, 116);
+            this.btnSiguiente.Location = new System.Drawing.Point(183, 178);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(90, 25);
+            this.btnSiguiente.Size = new System.Drawing.Size(135, 38);
             this.btnSiguiente.TabIndex = 5;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = true;
@@ -123,42 +133,62 @@
             this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtNombre);
-            this.panel1.Location = new System.Drawing.Point(15, 27);
+            this.panel1.Location = new System.Drawing.Point(22, 42);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(345, 160);
+            this.panel1.Size = new System.Drawing.Size(518, 246);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.groupBox2);
-            this.panel2.Controls.Add(this.groupBox1);
+            this.panel2.Controls.Add(this.grpAdicional);
+            this.panel2.Controls.Add(this.grpTipo);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.lblProducto);
-            this.panel2.Location = new System.Drawing.Point(15, 208);
+            this.panel2.Location = new System.Drawing.Point(22, 320);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(345, 235);
+            this.panel2.Size = new System.Drawing.Size(518, 362);
             this.panel2.TabIndex = 6;
             // 
-            // groupBox1
+            // grpAdicional
             // 
-            this.groupBox1.Controls.Add(this.rbRepuesto);
-            this.groupBox1.Controls.Add(this.rbEquipo);
-            this.groupBox1.ForeColor = System.Drawing.Color.Navy;
-            this.groupBox1.Location = new System.Drawing.Point(22, 66);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(221, 59);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tipo";
+            this.grpAdicional.Controls.Add(this.rbGarantía);
+            this.grpAdicional.Controls.Add(this.rbEnvío);
+            this.grpAdicional.Controls.Add(this.rbInstalación);
+            this.grpAdicional.ForeColor = System.Drawing.Color.Navy;
+            this.grpAdicional.Location = new System.Drawing.Point(33, 202);
+            this.grpAdicional.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpAdicional.Name = "grpAdicional";
+            this.grpAdicional.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpAdicional.Size = new System.Drawing.Size(332, 154);
+            this.grpAdicional.TabIndex = 9;
+            this.grpAdicional.TabStop = false;
+            this.grpAdicional.Text = "Adicional";
+            // 
+            // grpTipo
+            // 
+            this.grpTipo.Controls.Add(this.rbRepuesto);
+            this.grpTipo.Controls.Add(this.rbEquipo);
+            this.grpTipo.ForeColor = System.Drawing.Color.Navy;
+            this.grpTipo.Location = new System.Drawing.Point(33, 102);
+            this.grpTipo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpTipo.Name = "grpTipo";
+            this.grpTipo.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpTipo.Size = new System.Drawing.Size(332, 91);
+            this.grpTipo.TabIndex = 8;
+            this.grpTipo.TabStop = false;
+            this.grpTipo.Text = "Tipo";
             // 
             // rbRepuesto
             // 
             this.rbRepuesto.AutoSize = true;
             this.rbRepuesto.ForeColor = System.Drawing.Color.Navy;
-            this.rbRepuesto.Location = new System.Drawing.Point(15, 19);
+            this.rbRepuesto.Location = new System.Drawing.Point(22, 29);
+            this.rbRepuesto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbRepuesto.Name = "rbRepuesto";
-            this.rbRepuesto.Size = new System.Drawing.Size(71, 17);
+            this.rbRepuesto.Size = new System.Drawing.Size(104, 24);
             this.rbRepuesto.TabIndex = 7;
             this.rbRepuesto.TabStop = true;
             this.rbRepuesto.Text = "Repuesto";
@@ -168,9 +198,10 @@
             // 
             this.rbEquipo.AutoSize = true;
             this.rbEquipo.ForeColor = System.Drawing.Color.Navy;
-            this.rbEquipo.Location = new System.Drawing.Point(117, 19);
+            this.rbEquipo.Location = new System.Drawing.Point(176, 29);
+            this.rbEquipo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbEquipo.Name = "rbEquipo";
-            this.rbEquipo.Size = new System.Drawing.Size(58, 17);
+            this.rbEquipo.Size = new System.Drawing.Size(84, 24);
             this.rbEquipo.TabIndex = 6;
             this.rbEquipo.TabStop = true;
             this.rbEquipo.Text = "Equipo";
@@ -179,9 +210,10 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(122, 25);
+            this.comboBox1.Location = new System.Drawing.Point(183, 38);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(180, 28);
             this.comboBox1.TabIndex = 1;
             // 
             // lblProducto
@@ -190,30 +222,55 @@
             this.lblProducto.BackColor = System.Drawing.Color.White;
             this.lblProducto.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducto.ForeColor = System.Drawing.Color.Navy;
-            this.lblProducto.Location = new System.Drawing.Point(19, 25);
+            this.lblProducto.Location = new System.Drawing.Point(28, 38);
+            this.lblProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(64, 17);
+            this.lblProducto.Size = new System.Drawing.Size(96, 25);
             this.lblProducto.TabIndex = 0;
             this.lblProducto.Text = "Producto";
             // 
-            // groupBox2
+            // rbInstalación
             // 
-            this.groupBox2.ForeColor = System.Drawing.Color.Navy;
-            this.groupBox2.Location = new System.Drawing.Point(22, 131);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(221, 100);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Adicional";
+            this.rbInstalación.AutoSize = true;
+            this.rbInstalación.Location = new System.Drawing.Point(22, 40);
+            this.rbInstalación.Name = "rbInstalación";
+            this.rbInstalación.Size = new System.Drawing.Size(111, 24);
+            this.rbInstalación.TabIndex = 7;
+            this.rbInstalación.TabStop = true;
+            this.rbInstalación.Text = "Instalación";
+            this.rbInstalación.UseVisualStyleBackColor = true;
+            // 
+            // rbEnvío
+            // 
+            this.rbEnvío.AutoSize = true;
+            this.rbEnvío.Location = new System.Drawing.Point(176, 40);
+            this.rbEnvío.Name = "rbEnvío";
+            this.rbEnvío.Size = new System.Drawing.Size(73, 24);
+            this.rbEnvío.TabIndex = 8;
+            this.rbEnvío.TabStop = true;
+            this.rbEnvío.Text = "Envío";
+            this.rbEnvío.UseVisualStyleBackColor = true;
+            // 
+            // rbGarantía
+            // 
+            this.rbGarantía.AutoSize = true;
+            this.rbGarantía.Location = new System.Drawing.Point(22, 99);
+            this.rbGarantía.Name = "rbGarantía";
+            this.rbGarantía.Size = new System.Drawing.Size(96, 24);
+            this.rbGarantía.TabIndex = 9;
+            this.rbGarantía.TabStop = true;
+            this.rbGarantía.Text = "Garantía";
+            this.rbGarantía.UseVisualStyleBackColor = true;
             // 
             // frmCargaProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(381, 455);
+            this.ClientSize = new System.Drawing.Size(572, 700);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmCargaProducto";
             this.Text = "frmCargaProducto";
             this.Load += new System.EventHandler(this.frmCargaProducto_Load);
@@ -221,8 +278,10 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpAdicional.ResumeLayout(false);
+            this.grpAdicional.PerformLayout();
+            this.grpTipo.ResumeLayout(false);
+            this.grpTipo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -239,9 +298,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lblProducto;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpTipo;
         private System.Windows.Forms.RadioButton rbRepuesto;
         private System.Windows.Forms.RadioButton rbEquipo;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpAdicional;
+        private System.Windows.Forms.RadioButton rbGarantía;
+        private System.Windows.Forms.RadioButton rbEnvío;
+        private System.Windows.Forms.RadioButton rbInstalación;
     }
 }
