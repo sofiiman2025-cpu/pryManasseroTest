@@ -45,6 +45,7 @@
             this.rbInstalación = new System.Windows.Forms.RadioButton();
             this.rbGarantía = new System.Windows.Forms.RadioButton();
             this.rbEquipo = new System.Windows.Forms.RadioButton();
+            this.lbRegistroIG = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.grpOpciones.SuspendLayout();
             this.grpTipo.SuspendLayout();
@@ -128,6 +129,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbRegistroIG);
             this.panel1.Controls.Add(this.btnSiguiente);
             this.panel1.Controls.Add(this.cmbProducto);
             this.panel1.Controls.Add(this.btnRegistrar);
@@ -262,6 +264,15 @@
             this.rbEquipo.Text = "Equipo";
             this.rbEquipo.UseVisualStyleBackColor = true;
             // 
+            // lbRegistroIG
+            // 
+            this.lbRegistroIG.AutoSize = true;
+            this.lbRegistroIG.Location = new System.Drawing.Point(29, 244);
+            this.lbRegistroIG.Name = "lbRegistroIG";
+            this.lbRegistroIG.Size = new System.Drawing.Size(14, 20);
+            this.lbRegistroIG.TabIndex = 6;
+            this.lbRegistroIG.Text = "-";
+            // 
             // frmCargaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -305,5 +316,6 @@
         private System.Windows.Forms.RadioButton rbGarantía;
         private System.Windows.Forms.RadioButton rbInstalación;
         private System.Windows.Forms.RadioButton rbEquipo;
+        private System.Windows.Forms.Label lbRegistroIG;
     }
 }
