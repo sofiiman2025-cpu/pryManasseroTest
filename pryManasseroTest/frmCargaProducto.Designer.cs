@@ -36,11 +36,12 @@
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblProducto = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbRepuesto = new System.Windows.Forms.RadioButton();
+            this.rbEquipo = new System.Windows.Forms.RadioButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblProducto = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -130,13 +131,58 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.lblProducto);
             this.panel2.Location = new System.Drawing.Point(15, 208);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(345, 172);
+            this.panel2.Size = new System.Drawing.Size(345, 235);
             this.panel2.TabIndex = 6;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbRepuesto);
+            this.groupBox1.Controls.Add(this.rbEquipo);
+            this.groupBox1.ForeColor = System.Drawing.Color.Navy;
+            this.groupBox1.Location = new System.Drawing.Point(22, 66);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(221, 59);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tipo";
+            // 
+            // rbRepuesto
+            // 
+            this.rbRepuesto.AutoSize = true;
+            this.rbRepuesto.ForeColor = System.Drawing.Color.Navy;
+            this.rbRepuesto.Location = new System.Drawing.Point(15, 19);
+            this.rbRepuesto.Name = "rbRepuesto";
+            this.rbRepuesto.Size = new System.Drawing.Size(71, 17);
+            this.rbRepuesto.TabIndex = 7;
+            this.rbRepuesto.TabStop = true;
+            this.rbRepuesto.Text = "Repuesto";
+            this.rbRepuesto.UseVisualStyleBackColor = true;
+            // 
+            // rbEquipo
+            // 
+            this.rbEquipo.AutoSize = true;
+            this.rbEquipo.ForeColor = System.Drawing.Color.Navy;
+            this.rbEquipo.Location = new System.Drawing.Point(117, 19);
+            this.rbEquipo.Name = "rbEquipo";
+            this.rbEquipo.Size = new System.Drawing.Size(58, 17);
+            this.rbEquipo.TabIndex = 6;
+            this.rbEquipo.TabStop = true;
+            this.rbEquipo.Text = "Equipo";
+            this.rbEquipo.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(122, 25);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 1;
             // 
             // lblProducto
             // 
@@ -150,56 +196,22 @@
             this.lblProducto.TabIndex = 0;
             this.lblProducto.Text = "Producto";
             // 
-            // comboBox1
+            // groupBox2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(122, 25);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(117, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(15, 19);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(22, 66);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(221, 59);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tipo";
+            this.groupBox2.ForeColor = System.Drawing.Color.Navy;
+            this.groupBox2.Location = new System.Drawing.Point(22, 131);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(221, 100);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Adicional";
             // 
             // frmCargaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(381, 405);
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(381, 455);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmCargaProducto";
@@ -228,7 +240,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbRepuesto;
+        private System.Windows.Forms.RadioButton rbEquipo;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

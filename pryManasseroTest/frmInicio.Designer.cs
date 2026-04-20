@@ -37,7 +37,7 @@
             // picSistema
             // 
             this.picSistema.Image = global::pryManasseroTest.Properties.Resources.descarga;
-            this.picSistema.Location = new System.Drawing.Point(26, 12);
+            this.picSistema.Location = new System.Drawing.Point(12, 12);
             this.picSistema.Name = "picSistema";
             this.picSistema.Size = new System.Drawing.Size(280, 180);
             this.picSistema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -60,8 +60,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(335, 251);
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(310, 251);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.picSistema);
             this.ForeColor = System.Drawing.Color.White;
