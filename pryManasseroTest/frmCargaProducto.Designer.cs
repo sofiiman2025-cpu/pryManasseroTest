@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.grpAdicional = new System.Windows.Forms.GroupBox();
+            this.grpOpciones = new System.Windows.Forms.GroupBox();
             this.lblProducto = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.rbRepuesto = new System.Windows.Forms.RadioButton();
@@ -46,7 +46,7 @@
             this.rbGarantía = new System.Windows.Forms.RadioButton();
             this.rbEquipo = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
-            this.grpAdicional.SuspendLayout();
+            this.grpOpciones.SuspendLayout();
             this.grpTipo.SuspendLayout();
             this.grpAdiconal.SuspendLayout();
             this.SuspendLayout();
@@ -134,6 +134,7 @@
             this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtNombre);
+            this.panel1.ForeColor = System.Drawing.Color.Navy;
             this.panel1.Location = new System.Drawing.Point(22, 42);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
@@ -141,20 +142,20 @@
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // grpAdicional
+            // grpOpciones
             // 
-            this.grpAdicional.Controls.Add(this.grpAdiconal);
-            this.grpAdicional.Controls.Add(this.grpTipo);
-            this.grpAdicional.Controls.Add(this.comboBox1);
-            this.grpAdicional.Controls.Add(this.lblProducto);
-            this.grpAdicional.ForeColor = System.Drawing.Color.Navy;
-            this.grpAdicional.Location = new System.Drawing.Point(22, 330);
-            this.grpAdicional.Name = "grpAdicional";
-            this.grpAdicional.Size = new System.Drawing.Size(518, 415);
-            this.grpAdicional.TabIndex = 0;
-            this.grpAdicional.TabStop = false;
-            this.grpAdicional.Text = "Adicional";
-            this.grpAdicional.Visible = false;
+            this.grpOpciones.Controls.Add(this.grpAdiconal);
+            this.grpOpciones.Controls.Add(this.grpTipo);
+            this.grpOpciones.Controls.Add(this.comboBox1);
+            this.grpOpciones.Controls.Add(this.lblProducto);
+            this.grpOpciones.ForeColor = System.Drawing.Color.Navy;
+            this.grpOpciones.Location = new System.Drawing.Point(22, 330);
+            this.grpOpciones.Name = "grpOpciones";
+            this.grpOpciones.Size = new System.Drawing.Size(518, 415);
+            this.grpOpciones.TabIndex = 0;
+            this.grpOpciones.TabStop = false;
+            this.grpOpciones.Text = "-";
+            this.grpOpciones.Visible = false;
             // 
             // lblProducto
             // 
@@ -171,9 +172,14 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Notebook",
+            "Teclado",
+            "Impresora",
+            "Mouse"});
             this.comboBox1.Location = new System.Drawing.Point(183, 58);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.Size = new System.Drawing.Size(140, 28);
             this.comboBox1.TabIndex = 6;
             // 
             // rbRepuesto
@@ -262,7 +268,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(572, 757);
-            this.Controls.Add(this.grpAdicional);
+            this.Controls.Add(this.grpOpciones);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmCargaProducto";
@@ -270,8 +276,8 @@
             this.Load += new System.EventHandler(this.frmCargaProducto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.grpAdicional.ResumeLayout(false);
-            this.grpAdicional.PerformLayout();
+            this.grpOpciones.ResumeLayout(false);
+            this.grpOpciones.PerformLayout();
             this.grpTipo.ResumeLayout(false);
             this.grpTipo.PerformLayout();
             this.grpAdiconal.ResumeLayout(false);
@@ -289,7 +295,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox grpAdicional;
+        private System.Windows.Forms.GroupBox grpOpciones;
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.GroupBox grpTipo;
         private System.Windows.Forms.RadioButton rbEnvio;

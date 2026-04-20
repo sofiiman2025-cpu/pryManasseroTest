@@ -57,7 +57,9 @@ namespace pryManasseroTest
             else
             {
                 MessageBox.Show("Producto registrado con éxito");
+
             }
+            
         }
     }
 }
