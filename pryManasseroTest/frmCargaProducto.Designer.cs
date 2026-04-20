@@ -37,8 +37,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.grpAdicional = new System.Windows.Forms.GroupBox();
             this.lblProducto = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.rbRepuesto = new System.Windows.Forms.RadioButton();
+            this.rbEnvio = new System.Windows.Forms.RadioButton();
+            this.grpTipo = new System.Windows.Forms.GroupBox();
+            this.grpAdiconal = new System.Windows.Forms.GroupBox();
+            this.rbInstalación = new System.Windows.Forms.RadioButton();
+            this.rbGarantía = new System.Windows.Forms.RadioButton();
+            this.rbEquipo = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.grpAdicional.SuspendLayout();
+            this.grpTipo.SuspendLayout();
+            this.grpAdiconal.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -69,7 +79,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(147, 22);
+            this.txtNombre.Location = new System.Drawing.Point(136, 23);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(252, 26);
@@ -80,10 +90,10 @@
             this.cmbProducto.FormattingEnabled = true;
             this.cmbProducto.Items.AddRange(new object[] {
             "Notebook",
-            "Pc escritorio",
+            "Teclado",
             "Impresora",
-            "Scanner"});
-            this.cmbProducto.Location = new System.Drawing.Point(237, 106);
+            "Mouse"});
+            this.cmbProducto.Location = new System.Drawing.Point(239, 109);
             this.cmbProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbProducto.Name = "cmbProducto";
             this.cmbProducto.Size = new System.Drawing.Size(180, 28);
@@ -96,7 +106,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(28, 112);
+            this.label1.Location = new System.Drawing.Point(28, 109);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 25);
@@ -133,14 +143,18 @@
             // 
             // grpAdicional
             // 
+            this.grpAdicional.Controls.Add(this.grpAdiconal);
+            this.grpAdicional.Controls.Add(this.grpTipo);
+            this.grpAdicional.Controls.Add(this.comboBox1);
             this.grpAdicional.Controls.Add(this.lblProducto);
             this.grpAdicional.ForeColor = System.Drawing.Color.Navy;
             this.grpAdicional.Location = new System.Drawing.Point(22, 330);
             this.grpAdicional.Name = "grpAdicional";
-            this.grpAdicional.Size = new System.Drawing.Size(518, 286);
+            this.grpAdicional.Size = new System.Drawing.Size(518, 415);
             this.grpAdicional.TabIndex = 0;
             this.grpAdicional.TabStop = false;
             this.grpAdicional.Text = "Adicional";
+            this.grpAdicional.Visible = false;
             // 
             // lblProducto
             // 
@@ -154,12 +168,100 @@
             this.lblProducto.TabIndex = 0;
             this.lblProducto.Text = "Producto";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(183, 58);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.TabIndex = 6;
+            // 
+            // rbRepuesto
+            // 
+            this.rbRepuesto.AutoSize = true;
+            this.rbRepuesto.Location = new System.Drawing.Point(19, 30);
+            this.rbRepuesto.Name = "rbRepuesto";
+            this.rbRepuesto.Size = new System.Drawing.Size(122, 29);
+            this.rbRepuesto.TabIndex = 7;
+            this.rbRepuesto.TabStop = true;
+            this.rbRepuesto.Text = "Repuesto";
+            this.rbRepuesto.UseVisualStyleBackColor = true;
+            // 
+            // rbEnvio
+            // 
+            this.rbEnvio.AutoSize = true;
+            this.rbEnvio.Location = new System.Drawing.Point(19, 87);
+            this.rbEnvio.Name = "rbEnvio";
+            this.rbEnvio.Size = new System.Drawing.Size(86, 29);
+            this.rbEnvio.TabIndex = 8;
+            this.rbEnvio.TabStop = true;
+            this.rbEnvio.Text = "Envío";
+            this.rbEnvio.UseVisualStyleBackColor = true;
+            // 
+            // grpTipo
+            // 
+            this.grpTipo.Controls.Add(this.rbEquipo);
+            this.grpTipo.Controls.Add(this.rbRepuesto);
+            this.grpTipo.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpTipo.Location = new System.Drawing.Point(33, 122);
+            this.grpTipo.Name = "grpTipo";
+            this.grpTipo.Size = new System.Drawing.Size(386, 100);
+            this.grpTipo.TabIndex = 9;
+            this.grpTipo.TabStop = false;
+            this.grpTipo.Text = "Tipo";
+            // 
+            // grpAdiconal
+            // 
+            this.grpAdiconal.Controls.Add(this.rbGarantía);
+            this.grpAdiconal.Controls.Add(this.rbInstalación);
+            this.grpAdiconal.Controls.Add(this.rbEnvio);
+            this.grpAdiconal.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpAdiconal.Location = new System.Drawing.Point(33, 251);
+            this.grpAdiconal.Name = "grpAdiconal";
+            this.grpAdiconal.Size = new System.Drawing.Size(392, 140);
+            this.grpAdiconal.TabIndex = 10;
+            this.grpAdiconal.TabStop = false;
+            this.grpAdiconal.Text = "Adicional";
+            // 
+            // rbInstalación
+            // 
+            this.rbInstalación.AutoSize = true;
+            this.rbInstalación.Location = new System.Drawing.Point(19, 40);
+            this.rbInstalación.Name = "rbInstalación";
+            this.rbInstalación.Size = new System.Drawing.Size(134, 29);
+            this.rbInstalación.TabIndex = 0;
+            this.rbInstalación.TabStop = true;
+            this.rbInstalación.Text = "Instalación";
+            this.rbInstalación.UseVisualStyleBackColor = true;
+            // 
+            // rbGarantía
+            // 
+            this.rbGarantía.AutoSize = true;
+            this.rbGarantía.Location = new System.Drawing.Point(177, 40);
+            this.rbGarantía.Name = "rbGarantía";
+            this.rbGarantía.Size = new System.Drawing.Size(113, 29);
+            this.rbGarantía.TabIndex = 1;
+            this.rbGarantía.TabStop = true;
+            this.rbGarantía.Text = "Garantía";
+            this.rbGarantía.UseVisualStyleBackColor = true;
+            // 
+            // rbEquipo
+            // 
+            this.rbEquipo.AutoSize = true;
+            this.rbEquipo.Location = new System.Drawing.Point(177, 30);
+            this.rbEquipo.Name = "rbEquipo";
+            this.rbEquipo.Size = new System.Drawing.Size(100, 29);
+            this.rbEquipo.TabIndex = 2;
+            this.rbEquipo.TabStop = true;
+            this.rbEquipo.Text = "Equipo";
+            this.rbEquipo.UseVisualStyleBackColor = true;
+            // 
             // frmCargaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(572, 700);
+            this.ClientSize = new System.Drawing.Size(572, 757);
             this.Controls.Add(this.grpAdicional);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -170,6 +272,10 @@
             this.panel1.PerformLayout();
             this.grpAdicional.ResumeLayout(false);
             this.grpAdicional.PerformLayout();
+            this.grpTipo.ResumeLayout(false);
+            this.grpTipo.PerformLayout();
+            this.grpAdiconal.ResumeLayout(false);
+            this.grpAdiconal.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -185,5 +291,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox grpAdicional;
         private System.Windows.Forms.Label lblProducto;
+        private System.Windows.Forms.GroupBox grpTipo;
+        private System.Windows.Forms.RadioButton rbEnvio;
+        private System.Windows.Forms.RadioButton rbRepuesto;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox grpAdiconal;
+        private System.Windows.Forms.RadioButton rbGarantía;
+        private System.Windows.Forms.RadioButton rbInstalación;
+        private System.Windows.Forms.RadioButton rbEquipo;
     }
 }

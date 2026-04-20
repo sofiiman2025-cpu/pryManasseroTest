@@ -30,8 +30,15 @@ namespace pryManasseroTest
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Producto Registrado:");
-
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("Ingrese un nombre");
+                txtNombre.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Producto registrado");
+            }
 
         }
 
@@ -42,7 +49,15 @@ namespace pryManasseroTest
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-
+            if (cmbProducto.Text == "")
+            {
+                MessageBox.Show("Ingrese el producto que desee");
+                cmbProducto.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Producto registrado con éxito");
+            }
         }
     }
 }
