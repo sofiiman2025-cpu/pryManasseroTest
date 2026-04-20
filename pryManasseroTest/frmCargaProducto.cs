@@ -59,7 +59,8 @@ namespace pryManasseroTest
                 MessageBox.Show("Producto registrado con éxito");
 
             }     
-            lbRegistroIG.Text = "Producto: " + cmbProducto.Text + " - Nombre: " + txtNombre.Text;
+            lbRegistroIG.Text =  
+                " - Nombre: " + txtNombre.Text + " - Producto: " + cmbProducto.Text;
 
         }
     }
