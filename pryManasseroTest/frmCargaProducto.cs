@@ -32,7 +32,7 @@ namespace pryManasseroTest
         {
             if (txtNombre.Text == "")
             {
-                MessageBox.Show("Ingrese un nombre");
+                MessageBox.Show("Ingrese su nombre");           
                 txtNombre.Focus();
             }
             else
@@ -58,7 +58,7 @@ namespace pryManasseroTest
             {
                 MessageBox.Show("Producto registrado con éxito");
 
-            }
+            }      
             
         }
     }
