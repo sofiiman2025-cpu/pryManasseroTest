@@ -35,10 +35,7 @@ namespace pryManasseroTest
                 MessageBox.Show("Ingrese su nombre");           
                 txtNombre.Focus();
             }
-            else
-            {
-                MessageBox.Show("Producto registrado");
-            }
+            else MessageBox.Show("Nombre registrado con éxito");
 
         }
 
@@ -53,14 +50,35 @@ namespace pryManasseroTest
             {
                 MessageBox.Show("Ingrese el producto que desee");
                 cmbProducto.Focus();
+
             }
             else
             {
                 MessageBox.Show("Producto registrado con éxito");
 
             }     
+           
             lbRegistroIG.Text =  
                 " - Nombre: " + txtNombre.Text + " - Producto: " + cmbProducto.Text;
+
+        }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            if (rdbRepuesto.Checked || rdbEquipo.Checked)
+            {
+                string adicionales = "";
+
+                if (rdbInstalación.Checked) adicionales += "Instalación ";
+                if (rdbEnvio.Checked) adicionales += "Envío ";
+                if (rdbGarantía.Checked) adicionales += "Garantía ";
+
+                MessageBox.Show("Carga completa\nAdicionales: " + adicionales);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un tipo");
+            }
 
         }
     }
