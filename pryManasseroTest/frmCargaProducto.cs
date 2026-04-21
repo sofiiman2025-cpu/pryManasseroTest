@@ -19,7 +19,11 @@ namespace pryManasseroTest
 
         private void frmCargaProducto_Load(object sender, EventArgs e)
         {
-           
+            cmbProducto.Items.Add("Notebook");
+            cmbProducto.Items.Add("Teclado");
+            cmbProducto.Items.Add("Impresora");
+            cmbProducto.Items.Add("Mouse");
+
 
         }
 
@@ -46,18 +50,27 @@ namespace pryManasseroTest
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            if (cmbProducto.Text == "")
+            if (txtNombre.Text == "")
             {
-                MessageBox.Show("Ingrese el producto que desee");
-                cmbProducto.Focus();
+                MessageBox.Show("Ingrese su nombre");
+                txtNombre.Focus();
 
             }
+            if (cmbProducto.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un producto");
+                cmbProducto.Focus();
+            }
+
             else
             {
                 MessageBox.Show("Producto registrado con éxito");
 
-            }     
-           
+            }
+            if (txtNombre.Text != "" && cmbProducto.SelectedIndex != -1)
+            {
+                grpOpciones.Visible = true;
+            }
             lbRegistroIG.Text =  
                 " - Nombre: " + txtNombre.Text + " - Producto: " + cmbProducto.Text;
 
