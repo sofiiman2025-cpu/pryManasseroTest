@@ -39,14 +39,14 @@
             this.grpOpciones = new System.Windows.Forms.GroupBox();
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.grpAdiconal = new System.Windows.Forms.GroupBox();
-            this.rdbGarantía = new System.Windows.Forms.RadioButton();
-            this.rdbInstalación = new System.Windows.Forms.RadioButton();
-            this.rdbEnvio = new System.Windows.Forms.RadioButton();
             this.grpTipo = new System.Windows.Forms.GroupBox();
             this.rdbEquipo = new System.Windows.Forms.RadioButton();
             this.rdbRepuesto = new System.Windows.Forms.RadioButton();
             this.cmbProductoRegistrado = new System.Windows.Forms.ComboBox();
             this.lblProducto = new System.Windows.Forms.Label();
+            this.cbGarantía = new System.Windows.Forms.CheckBox();
+            this.cbInstalación = new System.Windows.Forms.CheckBox();
+            this.cbEnvío = new System.Windows.Forms.CheckBox();
             this.pPrincipal.SuspendLayout();
             this.grpOpciones.SuspendLayout();
             this.grpAdiconal.SuspendLayout();
@@ -155,7 +155,7 @@
             this.grpOpciones.Controls.Add(this.cmbProductoRegistrado);
             this.grpOpciones.Controls.Add(this.lblProducto);
             this.grpOpciones.ForeColor = System.Drawing.Color.Navy;
-            this.grpOpciones.Location = new System.Drawing.Point(15, 214);
+            this.grpOpciones.Location = new System.Drawing.Point(15, 27);
             this.grpOpciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpOpciones.Name = "grpOpciones";
             this.grpOpciones.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -179,9 +179,9 @@
             // 
             // grpAdiconal
             // 
-            this.grpAdiconal.Controls.Add(this.rdbGarantía);
-            this.grpAdiconal.Controls.Add(this.rdbInstalación);
-            this.grpAdiconal.Controls.Add(this.rdbEnvio);
+            this.grpAdiconal.Controls.Add(this.cbEnvío);
+            this.grpAdiconal.Controls.Add(this.cbInstalación);
+            this.grpAdiconal.Controls.Add(this.cbGarantía);
             this.grpAdiconal.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpAdiconal.Location = new System.Drawing.Point(22, 163);
             this.grpAdiconal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -191,42 +191,6 @@
             this.grpAdiconal.TabIndex = 10;
             this.grpAdiconal.TabStop = false;
             this.grpAdiconal.Text = "Adicional";
-            // 
-            // rdbGarantía
-            // 
-            this.rdbGarantía.AutoSize = true;
-            this.rdbGarantía.Location = new System.Drawing.Point(118, 26);
-            this.rdbGarantía.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.rdbGarantía.Name = "rdbGarantía";
-            this.rdbGarantía.Size = new System.Drawing.Size(78, 21);
-            this.rdbGarantía.TabIndex = 1;
-            this.rdbGarantía.TabStop = true;
-            this.rdbGarantía.Text = "Garantía";
-            this.rdbGarantía.UseVisualStyleBackColor = true;
-            // 
-            // rdbInstalación
-            // 
-            this.rdbInstalación.AutoSize = true;
-            this.rdbInstalación.Location = new System.Drawing.Point(13, 26);
-            this.rdbInstalación.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.rdbInstalación.Name = "rdbInstalación";
-            this.rdbInstalación.Size = new System.Drawing.Size(93, 21);
-            this.rdbInstalación.TabIndex = 0;
-            this.rdbInstalación.TabStop = true;
-            this.rdbInstalación.Text = "Instalación";
-            this.rdbInstalación.UseVisualStyleBackColor = true;
-            // 
-            // rdbEnvio
-            // 
-            this.rdbEnvio.AutoSize = true;
-            this.rdbEnvio.Location = new System.Drawing.Point(13, 57);
-            this.rdbEnvio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.rdbEnvio.Name = "rdbEnvio";
-            this.rdbEnvio.Size = new System.Drawing.Size(60, 21);
-            this.rdbEnvio.TabIndex = 8;
-            this.rdbEnvio.TabStop = true;
-            this.rdbEnvio.Text = "Envío";
-            this.rdbEnvio.UseVisualStyleBackColor = true;
             // 
             // grpTipo
             // 
@@ -289,15 +253,46 @@
             this.lblProducto.TabIndex = 0;
             this.lblProducto.Text = "Producto";
             // 
+            // cbGarantía
+            // 
+            this.cbGarantía.AutoSize = true;
+            this.cbGarantía.Location = new System.Drawing.Point(137, 27);
+            this.cbGarantía.Name = "cbGarantía";
+            this.cbGarantía.Size = new System.Drawing.Size(79, 21);
+            this.cbGarantía.TabIndex = 9;
+            this.cbGarantía.Text = "Garantía";
+            this.cbGarantía.UseVisualStyleBackColor = true;
+            // 
+            // cbInstalación
+            // 
+            this.cbInstalación.AutoSize = true;
+            this.cbInstalación.Location = new System.Drawing.Point(13, 27);
+            this.cbInstalación.Name = "cbInstalación";
+            this.cbInstalación.Size = new System.Drawing.Size(94, 21);
+            this.cbInstalación.TabIndex = 10;
+            this.cbInstalación.Text = "Instalación";
+            this.cbInstalación.UseVisualStyleBackColor = true;
+            // 
+            // cbEnvío
+            // 
+            this.cbEnvío.AutoSize = true;
+            this.cbEnvío.Location = new System.Drawing.Point(13, 54);
+            this.cbEnvío.Name = "cbEnvío";
+            this.cbEnvío.Size = new System.Drawing.Size(61, 21);
+            this.cbEnvío.TabIndex = 11;
+            this.cbEnvío.Text = "Envío";
+            this.cbEnvío.UseVisualStyleBackColor = true;
+            // 
             // frmCargaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(381, 541);
+            this.ClientSize = new System.Drawing.Size(384, 347);
             this.Controls.Add(this.grpOpciones);
             this.Controls.Add(this.pPrincipal);
             this.Name = "frmCargaProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carga de Productos";
             this.Load += new System.EventHandler(this.frmCargaProducto_Load);
             this.pPrincipal.ResumeLayout(false);
@@ -324,14 +319,14 @@
         private System.Windows.Forms.GroupBox grpOpciones;
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.GroupBox grpTipo;
-        private System.Windows.Forms.RadioButton rdbEnvio;
         private System.Windows.Forms.RadioButton rdbRepuesto;
         private System.Windows.Forms.ComboBox cmbProductoRegistrado;
         private System.Windows.Forms.GroupBox grpAdiconal;
-        private System.Windows.Forms.RadioButton rdbGarantía;
-        private System.Windows.Forms.RadioButton rdbInstalación;
         private System.Windows.Forms.RadioButton rdbEquipo;
         private System.Windows.Forms.Label lbRegistroIG;
         private System.Windows.Forms.Button btnFinalizar;
+        private System.Windows.Forms.CheckBox cbGarantía;
+        private System.Windows.Forms.CheckBox cbEnvío;
+        private System.Windows.Forms.CheckBox cbInstalación;
     }
 }

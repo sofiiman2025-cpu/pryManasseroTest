@@ -74,7 +74,7 @@ namespace pryManasseroTest
             pPrincipal.Visible = false;
             grpOpciones.Visible = true;
 
-            this.Size = new Size(600, 600);
+            this.Size = new Size(400, 386);
         }
 
         private void btnFinalizar_Click(object sender, EventArgs e)
@@ -107,11 +107,17 @@ namespace pryManasseroTest
 
             {
                 cmbProducto.Items.Add((string)txtNombre.Text);
+                cmbProductoRegistrado.Items.Add(txtNombre.Text);
                 MessageBox.Show("Nombre de producto registrado con éxito","Gestión de productos", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
 
                 txtNombre.Text = "";
                 txtNombre.Focus();
             }
+        }
+
+        private void rdbGarantía_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

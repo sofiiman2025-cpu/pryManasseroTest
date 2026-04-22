@@ -25,8 +25,9 @@ namespace pryManasseroTest
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             frmCargaProducto VentanaProducto = new frmCargaProducto();
-           
+           this.Hide();
             VentanaProducto.ShowDialog();
+            this.Close();
 
 
         }
