@@ -83,9 +83,9 @@ namespace pryManasseroTest
             {
                 string adicionales = "";
 
-                if (rdbInstalación.Checked) adicionales += "Instalación ";
-                if (rdbEnvio.Checked) adicionales += "Envío ";
-                if (rdbGarantía.Checked) adicionales += "Garantía ";
+                if (cbInstalación.Checked) adicionales += "Instalación ";
+                if (cbEnvío.Checked) adicionales += "Envío ";
+                if (cbGarantía.Checked) adicionales += "Garantía ";
 
                 MessageBox.Show("Carga completa\nAdicionales: " + adicionales);
             }
