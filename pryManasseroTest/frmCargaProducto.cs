@@ -19,13 +19,9 @@ namespace pryManasseroTest
 
         private void frmCargaProducto_Load(object sender, EventArgs e)
         {
-            cmbProducto.Items.Add("Notebook");
-            cmbProducto.Items.Add("Teclado");
-            cmbProducto.Items.Add("Impresora");
-            cmbProducto.Items.Add("Mouse");
-
 
         }
+
 
         private void cmbProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -36,10 +32,16 @@ namespace pryManasseroTest
         {
             if (txtNombre.Text == "")
             {
-                MessageBox.Show("Ingrese su nombre");           
+                MessageBox.Show("Ingrese su nombre", "Registro producto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);           
                 txtNombre.Focus();
             }
-            else MessageBox.Show("Nombre registrado con éxito");
+
+            else
+            {
+                cmbProducto.Items.Add((string)txtNombre.Text);
+                cmbProductoRegistrado.Items.Add((string)txtNombre.Text);
+                MessageBox.Show("Producto registrado con éxito");
+            } 
 
         }
 
@@ -50,12 +52,7 @@ namespace pryManasseroTest
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text == "")
-            {
-                MessageBox.Show("Ingrese su nombre");
-                txtNombre.Focus();
-
-            }
+           
             if (cmbProducto.SelectedIndex == -1)
             {
                 MessageBox.Show("Seleccione un producto");
@@ -74,6 +71,10 @@ namespace pryManasseroTest
             lbRegistroIG.Text =  
                 " - Nombre: " + txtNombre.Text + " - Producto: " + cmbProducto.Text;
 
+            pPrincipal.Visible = false;
+            grpOpciones.Visible = true;
+
+            this.Size = new Size(600, 600);
         }
 
         private void btnFinalizar_Click(object sender, EventArgs e)
@@ -93,6 +94,24 @@ namespace pryManasseroTest
                 MessageBox.Show("Seleccione un tipo");
             }
 
+        }
+
+        private void btnRegistrar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+
+            {
+                cmbProducto.Items.Add((string)txtNombre.Text);
+                MessageBox.Show("Nombre de producto registrado con éxito","Gestión de productos", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+
+                txtNombre.Text = "";
+                txtNombre.Focus();
+            }
         }
     }
 }

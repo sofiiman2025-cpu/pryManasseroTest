@@ -34,7 +34,7 @@
             this.cmbProducto = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSiguiente = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pPrincipal = new System.Windows.Forms.Panel();
             this.lbRegistroIG = new System.Windows.Forms.Label();
             this.grpOpciones = new System.Windows.Forms.GroupBox();
             this.btnFinalizar = new System.Windows.Forms.Button();
@@ -45,9 +45,9 @@
             this.grpTipo = new System.Windows.Forms.GroupBox();
             this.rdbEquipo = new System.Windows.Forms.RadioButton();
             this.rdbRepuesto = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbProductoRegistrado = new System.Windows.Forms.ComboBox();
             this.lblProducto = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.pPrincipal.SuspendLayout();
             this.grpOpciones.SuspendLayout();
             this.grpAdiconal.SuspendLayout();
             this.grpTipo.SuspendLayout();
@@ -59,10 +59,9 @@
             this.lblNombre.BackColor = System.Drawing.Color.White;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.Navy;
-            this.lblNombre.Location = new System.Drawing.Point(28, 25);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(19, 16);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(87, 25);
+            this.lblNombre.Size = new System.Drawing.Size(58, 17);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             // 
@@ -70,37 +69,31 @@
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.Navy;
-            this.btnRegistrar.Location = new System.Drawing.Point(410, 18);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRegistrar.Location = new System.Drawing.Point(273, 12);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(104, 35);
+            this.btnRegistrar.Size = new System.Drawing.Size(69, 23);
             this.btnRegistrar.TabIndex = 1;
             this.btnRegistrar.Text = "registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            this.btnRegistrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnRegistrar_KeyPress);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(136, 23);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombre.Location = new System.Drawing.Point(91, 15);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(252, 26);
-            this.txtNombre.TabIndex = 2;
+            this.txtNombre.Size = new System.Drawing.Size(169, 20);
+            this.txtNombre.TabIndex = 0;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // cmbProducto
             // 
             this.cmbProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProducto.FormattingEnabled = true;
-            this.cmbProducto.Items.AddRange(new object[] {
-            "Notebook",
-            "Teclado",
-            "Impresora",
-            "Mouse"});
-            this.cmbProducto.Location = new System.Drawing.Point(239, 109);
-            this.cmbProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbProducto.Location = new System.Drawing.Point(159, 71);
             this.cmbProducto.Name = "cmbProducto";
-            this.cmbProducto.Size = new System.Drawing.Size(180, 28);
-            this.cmbProducto.TabIndex = 3;
+            this.cmbProducto.Size = new System.Drawing.Size(121, 21);
+            this.cmbProducto.TabIndex = 2;
             this.cmbProducto.SelectedIndexChanged += new System.EventHandler(this.cmbProducto_SelectedIndexChanged);
             // 
             // label1
@@ -109,10 +102,9 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(28, 109);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(19, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 25);
+            this.label1.Size = new System.Drawing.Size(122, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Lista de productos";
             // 
@@ -120,39 +112,38 @@
             // 
             this.btnSiguiente.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguiente.ForeColor = System.Drawing.Color.Navy;
-            this.btnSiguiente.Location = new System.Drawing.Point(183, 178);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSiguiente.Location = new System.Drawing.Point(122, 116);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(135, 38);
-            this.btnSiguiente.TabIndex = 5;
+            this.btnSiguiente.Size = new System.Drawing.Size(90, 25);
+            this.btnSiguiente.TabIndex = 3;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = true;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
-            // panel1
+            // pPrincipal
             // 
-            this.panel1.Controls.Add(this.lbRegistroIG);
-            this.panel1.Controls.Add(this.btnSiguiente);
-            this.panel1.Controls.Add(this.cmbProducto);
-            this.panel1.Controls.Add(this.btnRegistrar);
-            this.panel1.Controls.Add(this.lblNombre);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtNombre);
-            this.panel1.ForeColor = System.Drawing.Color.Navy;
-            this.panel1.Location = new System.Drawing.Point(22, 42);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(518, 284);
-            this.panel1.TabIndex = 6;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pPrincipal.Controls.Add(this.lbRegistroIG);
+            this.pPrincipal.Controls.Add(this.btnSiguiente);
+            this.pPrincipal.Controls.Add(this.cmbProducto);
+            this.pPrincipal.Controls.Add(this.btnRegistrar);
+            this.pPrincipal.Controls.Add(this.lblNombre);
+            this.pPrincipal.Controls.Add(this.label1);
+            this.pPrincipal.Controls.Add(this.txtNombre);
+            this.pPrincipal.ForeColor = System.Drawing.Color.Navy;
+            this.pPrincipal.Location = new System.Drawing.Point(15, 27);
+            this.pPrincipal.Name = "pPrincipal";
+            this.pPrincipal.Size = new System.Drawing.Size(345, 185);
+            this.pPrincipal.TabIndex = 6;
+            this.pPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lbRegistroIG
             // 
             this.lbRegistroIG.AutoSize = true;
             this.lbRegistroIG.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRegistroIG.Location = new System.Drawing.Point(29, 244);
+            this.lbRegistroIG.Location = new System.Drawing.Point(19, 159);
+            this.lbRegistroIG.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbRegistroIG.Name = "lbRegistroIG";
-            this.lbRegistroIG.Size = new System.Drawing.Size(20, 25);
+            this.lbRegistroIG.Size = new System.Drawing.Size(13, 17);
             this.lbRegistroIG.TabIndex = 6;
             this.lbRegistroIG.Text = "-";
             // 
@@ -161,12 +152,14 @@
             this.grpOpciones.Controls.Add(this.btnFinalizar);
             this.grpOpciones.Controls.Add(this.grpAdiconal);
             this.grpOpciones.Controls.Add(this.grpTipo);
-            this.grpOpciones.Controls.Add(this.comboBox1);
+            this.grpOpciones.Controls.Add(this.cmbProductoRegistrado);
             this.grpOpciones.Controls.Add(this.lblProducto);
             this.grpOpciones.ForeColor = System.Drawing.Color.Navy;
-            this.grpOpciones.Location = new System.Drawing.Point(22, 330);
+            this.grpOpciones.Location = new System.Drawing.Point(15, 214);
+            this.grpOpciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpOpciones.Name = "grpOpciones";
-            this.grpOpciones.Size = new System.Drawing.Size(518, 461);
+            this.grpOpciones.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpOpciones.Size = new System.Drawing.Size(345, 300);
             this.grpOpciones.TabIndex = 0;
             this.grpOpciones.TabStop = false;
             this.grpOpciones.Text = "-";
@@ -175,9 +168,10 @@
             // btnFinalizar
             // 
             this.btnFinalizar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.Location = new System.Drawing.Point(371, 408);
+            this.btnFinalizar.Location = new System.Drawing.Point(247, 265);
+            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(122, 34);
+            this.btnFinalizar.Size = new System.Drawing.Size(81, 22);
             this.btnFinalizar.TabIndex = 11;
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = true;
@@ -189,9 +183,11 @@
             this.grpAdiconal.Controls.Add(this.rdbInstalación);
             this.grpAdiconal.Controls.Add(this.rdbEnvio);
             this.grpAdiconal.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpAdiconal.Location = new System.Drawing.Point(33, 251);
+            this.grpAdiconal.Location = new System.Drawing.Point(22, 163);
+            this.grpAdiconal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpAdiconal.Name = "grpAdiconal";
-            this.grpAdiconal.Size = new System.Drawing.Size(392, 140);
+            this.grpAdiconal.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpAdiconal.Size = new System.Drawing.Size(261, 91);
             this.grpAdiconal.TabIndex = 10;
             this.grpAdiconal.TabStop = false;
             this.grpAdiconal.Text = "Adicional";
@@ -199,9 +195,10 @@
             // rdbGarantía
             // 
             this.rdbGarantía.AutoSize = true;
-            this.rdbGarantía.Location = new System.Drawing.Point(177, 40);
+            this.rdbGarantía.Location = new System.Drawing.Point(118, 26);
+            this.rdbGarantía.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbGarantía.Name = "rdbGarantía";
-            this.rdbGarantía.Size = new System.Drawing.Size(113, 29);
+            this.rdbGarantía.Size = new System.Drawing.Size(78, 21);
             this.rdbGarantía.TabIndex = 1;
             this.rdbGarantía.TabStop = true;
             this.rdbGarantía.Text = "Garantía";
@@ -210,9 +207,10 @@
             // rdbInstalación
             // 
             this.rdbInstalación.AutoSize = true;
-            this.rdbInstalación.Location = new System.Drawing.Point(19, 40);
+            this.rdbInstalación.Location = new System.Drawing.Point(13, 26);
+            this.rdbInstalación.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbInstalación.Name = "rdbInstalación";
-            this.rdbInstalación.Size = new System.Drawing.Size(134, 29);
+            this.rdbInstalación.Size = new System.Drawing.Size(93, 21);
             this.rdbInstalación.TabIndex = 0;
             this.rdbInstalación.TabStop = true;
             this.rdbInstalación.Text = "Instalación";
@@ -221,9 +219,10 @@
             // rdbEnvio
             // 
             this.rdbEnvio.AutoSize = true;
-            this.rdbEnvio.Location = new System.Drawing.Point(19, 87);
+            this.rdbEnvio.Location = new System.Drawing.Point(13, 57);
+            this.rdbEnvio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbEnvio.Name = "rdbEnvio";
-            this.rdbEnvio.Size = new System.Drawing.Size(86, 29);
+            this.rdbEnvio.Size = new System.Drawing.Size(60, 21);
             this.rdbEnvio.TabIndex = 8;
             this.rdbEnvio.TabStop = true;
             this.rdbEnvio.Text = "Envío";
@@ -234,9 +233,11 @@
             this.grpTipo.Controls.Add(this.rdbEquipo);
             this.grpTipo.Controls.Add(this.rdbRepuesto);
             this.grpTipo.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpTipo.Location = new System.Drawing.Point(33, 122);
+            this.grpTipo.Location = new System.Drawing.Point(22, 79);
+            this.grpTipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpTipo.Name = "grpTipo";
-            this.grpTipo.Size = new System.Drawing.Size(386, 100);
+            this.grpTipo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpTipo.Size = new System.Drawing.Size(257, 65);
             this.grpTipo.TabIndex = 9;
             this.grpTipo.TabStop = false;
             this.grpTipo.Text = "Tipo";
@@ -244,9 +245,10 @@
             // rdbEquipo
             // 
             this.rdbEquipo.AutoSize = true;
-            this.rdbEquipo.Location = new System.Drawing.Point(177, 30);
+            this.rdbEquipo.Location = new System.Drawing.Point(118, 20);
+            this.rdbEquipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbEquipo.Name = "rdbEquipo";
-            this.rdbEquipo.Size = new System.Drawing.Size(100, 29);
+            this.rdbEquipo.Size = new System.Drawing.Size(69, 21);
             this.rdbEquipo.TabIndex = 2;
             this.rdbEquipo.TabStop = true;
             this.rdbEquipo.Text = "Equipo";
@@ -255,27 +257,24 @@
             // rdbRepuesto
             // 
             this.rdbRepuesto.AutoSize = true;
-            this.rdbRepuesto.Location = new System.Drawing.Point(19, 30);
+            this.rdbRepuesto.Location = new System.Drawing.Point(13, 20);
+            this.rdbRepuesto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbRepuesto.Name = "rdbRepuesto";
-            this.rdbRepuesto.Size = new System.Drawing.Size(122, 29);
+            this.rdbRepuesto.Size = new System.Drawing.Size(83, 21);
             this.rdbRepuesto.TabIndex = 7;
             this.rdbRepuesto.TabStop = true;
             this.rdbRepuesto.Text = "Repuesto";
             this.rdbRepuesto.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cmbProductoRegistrado
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Notebook",
-            "Teclado",
-            "Impresora",
-            "Mouse"});
-            this.comboBox1.Location = new System.Drawing.Point(183, 58);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 28);
-            this.comboBox1.TabIndex = 6;
+            this.cmbProductoRegistrado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProductoRegistrado.FormattingEnabled = true;
+            this.cmbProductoRegistrado.Location = new System.Drawing.Point(122, 38);
+            this.cmbProductoRegistrado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbProductoRegistrado.Name = "cmbProductoRegistrado";
+            this.cmbProductoRegistrado.Size = new System.Drawing.Size(95, 21);
+            this.cmbProductoRegistrado.TabIndex = 6;
             // 
             // lblProducto
             // 
@@ -283,26 +282,26 @@
             this.lblProducto.BackColor = System.Drawing.Color.White;
             this.lblProducto.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducto.ForeColor = System.Drawing.Color.Navy;
-            this.lblProducto.Location = new System.Drawing.Point(29, 58);
+            this.lblProducto.Location = new System.Drawing.Point(19, 38);
+            this.lblProducto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(96, 25);
+            this.lblProducto.Size = new System.Drawing.Size(64, 17);
             this.lblProducto.TabIndex = 0;
             this.lblProducto.Text = "Producto";
             // 
             // frmCargaProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(572, 833);
+            this.ClientSize = new System.Drawing.Size(381, 541);
             this.Controls.Add(this.grpOpciones);
-            this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Controls.Add(this.pPrincipal);
             this.Name = "frmCargaProducto";
             this.Text = "Carga de Productos";
             this.Load += new System.EventHandler(this.frmCargaProducto_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pPrincipal.ResumeLayout(false);
+            this.pPrincipal.PerformLayout();
             this.grpOpciones.ResumeLayout(false);
             this.grpOpciones.PerformLayout();
             this.grpAdiconal.ResumeLayout(false);
@@ -321,13 +320,13 @@
         private System.Windows.Forms.ComboBox cmbProducto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSiguiente;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pPrincipal;
         private System.Windows.Forms.GroupBox grpOpciones;
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.GroupBox grpTipo;
         private System.Windows.Forms.RadioButton rdbEnvio;
         private System.Windows.Forms.RadioButton rdbRepuesto;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbProductoRegistrado;
         private System.Windows.Forms.GroupBox grpAdiconal;
         private System.Windows.Forms.RadioButton rdbGarantía;
         private System.Windows.Forms.RadioButton rdbInstalación;
