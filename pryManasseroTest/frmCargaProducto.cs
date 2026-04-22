@@ -59,11 +59,6 @@ namespace pryManasseroTest
                 cmbProducto.Focus();
             }
 
-            else
-            {
-                MessageBox.Show("Producto registrado con éxito");
-
-            }
             if (txtNombre.Text != "" && cmbProducto.SelectedIndex != -1)
             {
                 grpOpciones.Visible = true;
@@ -93,7 +88,7 @@ namespace pryManasseroTest
             {
                 MessageBox.Show("Seleccione un tipo");
             }
-
+            
         }
 
         private void btnRegistrar_KeyPress(object sender, KeyPressEventArgs e)

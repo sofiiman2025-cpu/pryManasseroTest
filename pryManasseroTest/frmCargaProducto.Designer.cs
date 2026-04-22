@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargaProducto));
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -112,7 +113,7 @@
             // 
             this.btnSiguiente.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguiente.ForeColor = System.Drawing.Color.Navy;
-            this.btnSiguiente.Location = new System.Drawing.Point(122, 116);
+            this.btnSiguiente.Location = new System.Drawing.Point(251, 111);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(90, 25);
             this.btnSiguiente.TabIndex = 3;
@@ -155,7 +156,7 @@
             this.grpOpciones.Controls.Add(this.cmbProductoRegistrado);
             this.grpOpciones.Controls.Add(this.lblProducto);
             this.grpOpciones.ForeColor = System.Drawing.Color.Navy;
-            this.grpOpciones.Location = new System.Drawing.Point(15, 27);
+            this.grpOpciones.Location = new System.Drawing.Point(15, 11);
             this.grpOpciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpOpciones.Name = "grpOpciones";
             this.grpOpciones.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -291,6 +292,7 @@
             this.ClientSize = new System.Drawing.Size(384, 347);
             this.Controls.Add(this.grpOpciones);
             this.Controls.Add(this.pPrincipal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCargaProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carga de Productos";
