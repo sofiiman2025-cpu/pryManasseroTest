@@ -36,8 +36,9 @@
             // 
             // picSistema
             // 
+            this.picSistema.BackColor = System.Drawing.Color.MidnightBlue;
             this.picSistema.Image = global::pryManasseroTest.Properties.Resources.descarga;
-            this.picSistema.Location = new System.Drawing.Point(36, 18);
+            this.picSistema.Location = new System.Drawing.Point(34, 21);
             this.picSistema.Name = "picSistema";
             this.picSistema.Size = new System.Drawing.Size(233, 174);
             this.picSistema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -48,7 +49,7 @@
             // 
             this.btnIniciar.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnIniciar.Location = new System.Drawing.Point(119, 198);
+            this.btnIniciar.Location = new System.Drawing.Point(113, 201);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(75, 27);
             this.btnIniciar.TabIndex = 1;
@@ -60,8 +61,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(310, 251);
+            this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.ClientSize = new System.Drawing.Size(301, 251);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.picSistema);
             this.ForeColor = System.Drawing.Color.White;

@@ -114,5 +114,10 @@ namespace pryManasseroTest
         {
 
         }
+
+        private void cbInstalación_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
