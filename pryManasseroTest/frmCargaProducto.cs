@@ -32,7 +32,7 @@ namespace pryManasseroTest
         {
             if (txtNombre.Text == "")
             {
-                MessageBox.Show("Ingrese su nombre", "Registro producto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);           
+                MessageBox.Show("Ingrese su nombre", "Gestión de productos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);           
                 txtNombre.Focus();
             }
 
@@ -40,7 +40,7 @@ namespace pryManasseroTest
             {
                 cmbProducto.Items.Add((string)txtNombre.Text);
                 cmbProductoRegistrado.Items.Add((string)txtNombre.Text);
-                MessageBox.Show("Producto registrado con éxito");
+                MessageBox.Show("Producto registrado con éxito", "Gestión de productos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             } 
 
         }
@@ -55,7 +55,7 @@ namespace pryManasseroTest
            
             if (cmbProducto.SelectedIndex == -1)
             {
-                MessageBox.Show("Seleccione un producto");
+                MessageBox.Show("Seleccione un producto", "Gestión de productos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 cmbProducto.Focus();
             }
 
@@ -86,7 +86,7 @@ namespace pryManasseroTest
             }
             else
             {
-                MessageBox.Show("Seleccione un tipo");
+                MessageBox.Show("Seleccione un tipo", "Gestión de productos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             
         }

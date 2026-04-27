@@ -275,7 +275,7 @@
             // 
             this.cmbProductoRegistrado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProductoRegistrado.FormattingEnabled = true;
-            this.cmbProductoRegistrado.Location = new System.Drawing.Point(122, 38);
+            this.cmbProductoRegistrado.Location = new System.Drawing.Point(114, 32);
             this.cmbProductoRegistrado.Margin = new System.Windows.Forms.Padding(2);
             this.cmbProductoRegistrado.Name = "cmbProductoRegistrado";
             this.cmbProductoRegistrado.Size = new System.Drawing.Size(95, 21);
@@ -287,7 +287,7 @@
             this.lblProducto.BackColor = System.Drawing.Color.White;
             this.lblProducto.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducto.ForeColor = System.Drawing.Color.Navy;
-            this.lblProducto.Location = new System.Drawing.Point(19, 38);
+            this.lblProducto.Location = new System.Drawing.Point(19, 33);
             this.lblProducto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(64, 17);
