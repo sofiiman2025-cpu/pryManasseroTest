@@ -77,12 +77,19 @@ namespace pryManasseroTest
             if (rdbRepuesto.Checked || rdbEquipo.Checked)
             {
                 string adicionales = "";
+                string tipo = "";
 
                 if (cbInstalación.Checked) adicionales += "Instalación ";
                 if (cbEnvío.Checked) adicionales += "Envío ";
                 if (cbGarantía.Checked) adicionales += "Garantía ";
+                if (rdbRepuesto.Checked) tipo += "Repuesto ";
+                if (rdbEquipo.Checked) tipo += "Equipo ";
 
-                MessageBox.Show("Carga completa\nAdicionales: " + adicionales);
+                MessageBox.Show(
+                    "Tipo: " + tipo + "\nAdicionales: " + adicionales,
+                    "resumen",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
             }
             else
             {
